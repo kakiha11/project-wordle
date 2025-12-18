@@ -1,13 +1,13 @@
 import React from 'react';
 
-function GuessInput() {
+function GuessInput({ handleNewGuess }) {
   const [inputValue, setInputValue] = React.useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
     
     // Process the form submission here
-    console.log('Form submitted with value:', inputValue);
+    handleNewGuess(inputValue);
     
     // Clear the input after submission
     setInputValue('');
